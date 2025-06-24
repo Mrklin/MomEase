@@ -46,8 +46,9 @@
 }
 
 #login{
-   display: none;
+   display: flex;
 }
+
 
 h1{
     margin-bottom: 10px;
@@ -61,6 +62,7 @@ label{
     text-align: start;
     margin-bottom: 8px;
     padding: 0 25px;
+    font-weight: lighter;
 
     span{
         font-size: 12px;
@@ -101,7 +103,7 @@ input::placeholder{
     align-items: center;
     gap: 2px;
     width: 300px;
-    padding: 10px;
+    padding: 0px 25px;
 
     hr{
         width: 45%;
@@ -114,9 +116,15 @@ input::placeholder{
     padding: 10px;
     width: 300px;
     border-radius: 8px;
-    color: white;
     background-color: #FF4DA6;
     cursor: pointer;
+    color: white;
+
+    a{
+        text-decoration: none;
+        width: 100%;
+        color: white;
+    }
  }
 
  .signbtn:hover{
@@ -129,6 +137,7 @@ input::placeholder{
     align-items: center;
     gap: 10px;
     width: 300px;
+    padding: 0px 25px;
      button{
         width: 100%;
         outline: none;
@@ -159,18 +168,19 @@ input::placeholder{
      }
      p{
         font-size: 14px;
-        span{
+        a{
             color: #FF4DA6;
             cursor: pointer;
+            text-decoration: none;
         }
-        span:hover{
+        a:hover{
             text-decoration: underline;
         }
      }
  }
  #forgot1{
     position: relative;
-    display: none;
+    display: flex;
     gap: 20px;
     align-items: center;
     justify-content: center;
@@ -178,6 +188,7 @@ input::placeholder{
 
     label{
         padding: 0px;
+        font-weight: lighter;
     }
 
     .back{
@@ -186,22 +197,28 @@ input::placeholder{
         outline: none;
         border: none;
         border-radius: 20px;
-        padding: 10px;
+        padding: 15px;
         color: white;
         background-color: #fcaad7;
         align-self: flex-start;
-        cursor: pointer;
+        a{
+         color: white;
+         text-decoration: none;
+         width: 100%;
+         cursor: pointer;
+        }
     }
     
 
     p{
-        font-weight: 600;
+        font-weight: 500;
+
     }
  }
 
  #otp_page{
     position: relative;
-    display: none;
+    display: flex;
     gap: 20px;
     align-items: center;
     justify-content: center;
@@ -224,13 +241,37 @@ input::placeholder{
         outline: none;
         border: none;
         border-radius: 20px;
-        padding: 10px;
-        color: white;
+        padding: 15px;
         background-color: #fcaad7;
         align-self: flex-start;
         cursor: pointer;
+        a{
+         color: white;
+         text-decoration: none;
+         width: 100%;
+        }
     }
  }
+
+ .message {
+        margin-top: 20px;
+        padding: 12px;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        align-self: center;
+        padding: 0px 25px;
+      }
+      .message.success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+      .message.error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
 
  @media (max-width: 767px) {
     .main{

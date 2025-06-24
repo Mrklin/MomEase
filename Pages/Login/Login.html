@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="LoginSignup.css">
+</head>
+<body>
+    <main class="main">
+
+        <div class="logo">
+            <img src="/MomEase/assets/Logo.svg" alt="" srcset="">
+        </div>
+        <div class="loginSign">
+
+                                         <!-- login -->
+            <div class="page" id="login">
+                 <h1>Login</h1>
+
+                    <label for="username">
+                        <span>Username</span>
+                        <input type="text" id="username" name="username" placeholder="Username" />
+                    </label>
+                    <label for="email">
+                        <span>E-mail</span>
+                        <input type="email" id="email" name="email" placeholder="example@emial.com" />
+                    </label>
+                    
+                    <label for="verifypass">
+                        <span>Password</span>
+                        <input type="password" id="password" name="verifypass" placeholder="******" />
+                    </label>
+                    <a class="password" href="./forgotPass1.html" id="forgot">Forgot Password ?</a>
+                    <button class="signbtn" id="logto" type="button"> <a href="../Menu/das.html">Login</a></button>
+                    <div class="hr">
+                        <hr> <span>or</span> <hr>
+                    </div>
+                    <div class="social_btn">
+                    <button class="facebook"><img src="/MomEase/assets/facebook.svg" alt="" srcset="">Sign up with Facebook</button>
+                    <button><img src="/MomEase/assets/google.svg" alt="" srcset="">Sign up with Google</button>
+                    <p>Don't have an account ?  <span id="reg"> <a href="./Signup.html">Register</a></span></p>
+                    </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+</body>
+<script src="../Js/Login.js"></script>
+</html>

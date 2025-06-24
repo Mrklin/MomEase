@@ -9,13 +9,12 @@ const back = document.getElementById('back');
 const otp_back = document.getElementById('otp_back');
 const otp_page = document.getElementById('otp_page');
 const signbtn = document.getElementById('signbtn');
-
+const signin = document.getElementById('signin');
 
 loginBtn.addEventListener('click', function () {
     signup.style.display = 'none';
     forgot1.style.display = 'none'
     login.style.display = 'flex'
-    
     
 });
 
@@ -45,4 +44,9 @@ signbtn.addEventListener('click', () =>{
     otp_page.style.display = 'flex';
     forgot1.style.display = 'none';
     
+})
+
+signin.addEventListener('click', ()=>{
+    signup.style.display = 'none';
+    login.style.display = 'flex'
 })

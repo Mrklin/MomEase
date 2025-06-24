@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Check-In - MomEase</title>
+    <link rel="stylesheet" href="mood.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="./media/Logo.svg" alt="MomEase Logo"> <span>MomEase</span>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="./das.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="active"><a href="./mood.html"><i class="fas fa-check-square"></i> Mood Check-in</a></li>
+                    <li><a href="#"><i class="fas fa-quote-left"></i> Affirmations</a></li>
+                    <li><a href="#"><i class="fas fa-microphone"></i> Voice Journals</a></li>
+                    <li><a href="#"><i class="fas fa-user-friends"></i> Partner's Reminder</a></li>
+                    <li><a href="./feed.html"><i class="fas fa-rss"></i> Feeds</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Insights</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="header-icons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-cog"></i>
+                    <img src="./media/profile.jpg" alt="Profile Picture" class="profile-pic"> </div>
+            </header>
+
+            <section class="mood-check-in-section">
+                <h2>Mood Check-In</h2>
+                <p>Let us know how you're feeling today <span class="heart-icon">💖</span></p>
+
+                <div class="mood-options">
+                    <div class="mood-card">
+                        <i class="far fa-smile"></i>
+                        <span>Happy</span>
+                    </div>
+                    <div class="mood-card selected">
+                        <i class="far fa-frown"></i>
+                        <span>Sad</span>
+                    </div>
+                    <div class="mood-card">
+                        <i class="far fa-angry"></i>
+                        <span>Angry</span>
+                    </div>
+                    <div class="mood-card">
+                        <i class="far fa-tired"></i>
+                        <span>Low</span>
+                    </div>
+                </div>
+
+                <div class="mood-note-container">
+                    <textarea class="mood-note-initial" placeholder="Optional: Add note about your mood..."></textarea>
+
+                    </div>
+
+
+                <button class="submit-mood-btn">Submit Mood</button>
+
+                <div class="thank-you-message hidden">
+                    <p>Thank you for checking in <span class="heart-icon">💖</span></p>
+                </div>
+
+                <div class="last-checkins-card">
+                    <p><i class="fas fa-clipboard"></i> Your Last 3 Check-ins: <span class="emoji-icons">😔😔😠</span></p>
+                </div>
+
+                <div class="reminder-card">
+                    <p>Remember to take 5 minutes just for you today <span class="sparkle-icon">✨</span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

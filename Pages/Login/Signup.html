@@ -17,14 +17,20 @@
                                 <!-- Signup -->
             <div class=" page" id="signup">
                 <h1>Sign up</h1>
+
+                <form id="registration">
                 
                     <label for="fullName">
                         <span>Full Name</span>
                         <input type="text" name="fullName" placeholder="Full Name" />
                     </label>
+                    <label for="username">
+                        <span>Username</span>
+                        <input type="text" name="username" id="username" placeholder="Username" />
+                    </label>
                     <label for="email">
                         <span>E-mail</span>
-                        <input type="email" name="email" placeholder="example@emial.com" />
+                        <input type="email" name="email" id="email" placeholder="example@email.com" />
                     </label>
                     <label for="tel">
                         <span>Phone Number</span>
@@ -32,78 +38,27 @@
                     </label>
                     <label for="createpass">
                         <span>Password</span>
-                        <input type="password" name="createpass" placeholder="******" />
+                        <input type="password" id="password" name="createpass" placeholder="******" />
                     </label>
                     <label for="verifypass">
                         <span>Confirm password</span>
-                        <input type="password" name="verifypass" placeholder="******" />
+                        <input type="password" id="comfirmPassword" name="verifypass" placeholder="******" />
                     </label>
-                    <button class="signbtn" type="button">Sign up</button>
+                    <button class="signbtn" id="signin" type="button"> <a href="./Login.html">Sign up</a> </button>
                     <div class="hr">
                         <hr> <span>or</span> <hr>
                     </div>
                     <div class="social_btn">
                         <button class="facebook"><img src="/MomEase/assets/facebook.svg" alt="" srcset="">Sign up with Facebook</button>
                         <button><img src="/MomEase/assets/google.svg" alt="" srcset="">Sign up with Google</button>
-                        <p>Already have an account ?  <span id="log">Login</span></p>
+                        <p>Already have an account ?  <span id="log"> <a href="./Login.html">Login</a></span></p>
                     </div>
-                
+                    <div id="formMessage" class="message"></div>
+                </form>
             </div>
-
-                                         <!-- login -->
-            <div class="page" id="login">
-                 <h1>Login</h1>
-
-                    <label for="fullName">
-                        <span>Full name</span>
-                        <input type="text" name="fullName" placeholder="Full Name" />
-                    </label>
-                    <label for="email">
-                        <span>E-mail</span>
-                        <input type="email" name="email" placeholder="example@emial.com" />
-                    </label>
-                    
-                    <label for="verifypass">
-                        <span>Password</span>
-                        <input type="password" name="verifypass" placeholder="******" />
-                    </label>
-                    <a class="password" id="forgot">Forgot Password ?</a>
-                    <button class="signbtn" type="button">Login</button>
-                    <div class="hr">
-                        <hr> <span>or</span> <hr>
-                    </div>
-                    <div class="social_btn">
-                    <button class="facebook"><img src="/MomEase/assets/facebook.svg" alt="" srcset="">Sign up with Facebook</button>
-                    <button><img src="/MomEase/assets/google.svg" alt="" srcset="">Sign up with Google</button>
-                    <p>Don't have an account ?  <span id="reg">Register</span></p>
-                    </div>
-
-            </div>
-
-            <div class="page" id="forgot1">
-                <button class="back" id="back">back</button>
-                <p>Please enter your email to recieve verification</p>
-                
-                <label for="email">Email Address
-                <input type="email" name="email" placeholder="Enter email here" id="forgot_mail">
-                </label>
-                <button id="signbtn" class="signbtn">Send</button>
-            </div>
-
-            <div class="page" id="otp_page">
-                <button id="otp_back" class="back">back</button>
-                <p>Please enter the 4 digit code sent to your email! <span></span></p>
-                
-                <label for="otp">
-                <input type="text" name="otp" inputmode="numeric" pattern="[0-9]{4}" 
-                maxlength="4" id="otp">
-                </label>
-                <button  id="resend" class="signbtn">Resend</button>
-            </div>
-
 
         </div>
     </main>
-    <script src="./form.js"></script>
+    <script src="../Js/Signup.js"></script>
 </body>
 </html>

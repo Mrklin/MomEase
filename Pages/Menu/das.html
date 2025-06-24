@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MomEase Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <img src="./media/Logo.jpg" alt="MomEase logo" />
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="./das.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="./mood.html"><i class="fas fa-check-circle"></i> Mood Check-in</a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i> Affirmations</a></li>
+                    <li><a href="#"><i class="fas fa-microphone"></i> Voice Journals</a></li>
+                    <li><a href="#"><i class="fas fa-user-friends"></i> Partner Reminder</a></li>
+                    <li><a href="./feed.html"><i class="fas fa-book-open"></i> Feeds</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Insights</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar-mobile">
+                <div class="ham_container">
+                    <div class="hamburger-menu" id="hamburgerMenu"><i class="fas fa-bars"></i></div>
+                 <div class="top-icons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-cog"></i>
+                    <div class="profile-pic">
+                        <img src="./media/profile.jpg" alt="Profile">
+                    </div>
+                </div>
+                </div>
+                
+                <nav class="navigation" id="mob-nav">
+                <ul>
+                    <li><a href="./das.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="./mood.html"><i class="fas fa-check-circle"></i> Mood Check-in</a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i> Affirmations</a></li>
+                    <li><a href="#"><i class="fas fa-microphone"></i> Voice Journals</a></li>
+                    <li><a href="#"><i class="fas fa-user-friends"></i> Partner Reminder</a></li>
+                    <li><a href="./feed.html"><i class="fas fa-book-open"></i> Feeds</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Insights</a></li>
+                </ul>
+                </nav>
+            </header>
+
+            <div class="header-desktop">
+                 <div class="top-icons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-cog"></i>
+                    <div class="profile-pic">
+                        <img src="./media/profile.jpg" alt="Profile">
+                    </div>
+                </div>
+            </div>
+
+
+            <h1>Hi Mama Ada,</h1>
+            <p class="feeling-question">How are you feeling?</p>
+
+            <div class="mood-selection">
+                <button class="mood-button" data-mood="happy">
+                    <i class="far fa-smile"></i> Happy
+                </button>
+                <button class="mood-button" data-mood="sad">
+                    <i class="far fa-frown"></i> Sad
+                </button>
+                <button class="mood-button" data-mood="angry">
+                    <i class="far fa-angry"></i> Angry
+                </button>
+                <button class="mood-button" data-mood="low">
+                    <i class="far fa-tired"></i> Low
+                </button>
+            </div>
+
+            <button class="submit-mood">Submit Mood</button>
+
+            <div class="affirmation-box">
+                "You are strong, even when you feel tired."
+            </div>
+
+            <div class="action-buttons">
+                <button class="action-card">
+                    <i class="fas fa-users"></i>
+                    <span>Talk to Someone</span>
+                </button>
+                <button class="action-card">
+                    <i class="fas fa-heart"></i>
+                    <span>Daily Affirmation</span>
+                </button>
+                <button class="action-card">
+                    <i class="fas fa-microphone"></i>
+                    <span>Calm Space</span>
+                </button>
+                <button class="action-card">
+                    <i class="fas fa-book-open"></i>
+                    <span>Feeds</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="dash.js"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-pink: #FF69B4; /* Deep Pink */
+    --light-pink: #FFC0CB; /* Light Pink */
+    --dark-gray: #333;
+    --medium-gray: #555;
+    --light-gray: #eee;
+    --white: #fff;
+    --border-color: #ddd;
+    --card-bg: #f9f9f9;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.sidebar .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sidebar .logo span {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--dark-gray);
+}
+
+.sidebar .navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .navigation li {
+    margin-bottom: 15px;
+}
+
+.sidebar .navigation a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--medium-gray);
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .navigation a i {
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.sidebar .navigation a:hover,
+.sidebar .navigation li.active a {
+    background-color: var(--light-pink);
+    color: var(--primary-pink);
+}
+
+.sidebar .navigation li.active a {
+    font-weight: 600;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: var(--light-gray);
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons i {
+    font-size: 1.5em;
+    color: var(--medium-gray);
+    margin-left: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.header-icons i:hover {
+    color: var(--dark-gray);
+}
+
+.header-icons .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+    object-fit: cover;
+    border: 2px solid var(--primary-pink);
+}
+
+/* Mood Check-in Section */
+.mood-check-in-section {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mood-check-in-section h2 {
+    font-size: 2em;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.mood-check-in-section p {
+    font-size: 1.1em;
+    color: var(--medium-gray);
+    margin-bottom: 30px;
+}
+
+.heart-icon {
+    color: var(--primary-pink);
+}
+
+.mood-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.mood-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+.mood-card:hover {
+    border-color: var(--primary-pink);
+    transform: translateY(-3px);
+}
+
+.mood-card.selected {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border-color: var(--primary-pink);
+}
+
+.mood-card.selected i {
+    color: var(--white);
+}
+
+.mood-card i {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: var(--medium-gray);
+    transition: color 0.3s ease;
+}
+
+.mood-card span {
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.mood-note-container {
+    margin-bottom: 30px;
+}
+
+textarea {
+    width: calc(100% - 40px); /* Adjust for padding */
+    padding: 15px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: var(--dark-gray);
+    resize: vertical;
+    min-height: 80px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+textarea::placeholder {
+    color: var(--medium-gray);
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.2);
+}
+
+/* Specific styling for the filled state textarea */
+.mood-note-filled {
+    background-color: var(--card-bg); /* A slightly different background if needed */
+    color: var(--dark-gray);
+}
+
+
+.submit-mood-btn {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.submit-mood-btn:hover {
+    background-color: #e05c9f; /* Slightly darker pink */
+}
+
+.thank-you-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--primary-pink);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.thank-you-message.hidden {
+    display: none;
+}
+
+.last-checkins-card,
+.reminder-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+}
+
+.last-checkins-card p,
+.reminder-card p {
+    margin: 0;
+    font-size: 1.1em;
+    color: var(--medium-gray);
+}
+
+.last-checkins-card i {
+    margin-right: 10px;
+    color: var(--primary-pink);
+}
+
+.emoji-icons {
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+
+.reminder-card .sparkle-icon {
+    color: #FFD700; /* Gold color for sparkle */
+    margin-left: 5px;
+}
+
+/* Basic animation for the thank you message */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 80px;
+        padding: 15px 10px;
+    }
+    .sidebar .logo span {
+        display: none;
+    }
+    .sidebar .navigation a span {
+        display: none;
+    }
+    .sidebar .navigation a {
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .sidebar .navigation a i {
+        margin-right: 0;
+    }
+    .main-content {
+        padding: 20px;
+    }
+    .mood-options {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .mood-card {
+        padding: 10px 15px;
+        min-width: unset;
+        width: 45%; /* Two cards per row */
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 60px;
+        padding: 10px 5px;
+    }
+    .header {
+        justify-content: center;
+    }
+    .header-icons {
+        margin-right: 0;
+    }
+    .mood-check-in-section {
+        padding: 20px;
+    }
+    .mood-card {
+        width: 90%; /* One card per row */
+    }
+    .submit-mood-btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}

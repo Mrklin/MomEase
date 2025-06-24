@@ -1,0 +1,363 @@
+/* General Body and Font Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Dashboard Container - for desktop layout */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+}
+
+/* Sidebar Styles (Desktop Only) */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    /* Hidden by default for mobile, shown on desktop */
+    display: none;
+}
+
+.sidebar .logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ea5091; /* Pink color from the design */
+}
+
+.sidebar .navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .navigation li {
+    margin-bottom: 15px;
+}
+
+.sidebar .navigation a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar .navigation a i {
+    margin-right: 10px;
+    width: 20px; /* Standardize icon width */
+    text-align: center;
+}
+
+.sidebar .navigation a:hover,
+.sidebar .navigation a.active {
+    background-color: #ffeef6; /* Light pink background */
+    color: #ea5091; /* Pink color */
+    font-weight: bold;
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 800px; /* Limit content width */
+    margin: 0 auto; /* Center content */
+}
+
+/* Top Bar Mobile (Visible on Mobile, Hidden on Desktop) */
+.top-bar-mobile {
+    display: flex; /* Flexbox for layout */
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.ham_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+#mob-nav {
+    display: flex; /* Hidden by default */
+    position: absolute;
+    top: 70px; /* Below the top bar */
+    left: -40%;
+    width: 30%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#mob-nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+#mob-nav li{
+    margin-bottom: 15px;
+}
+
+#mob-nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: .8em;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#mob-nav a i {
+    margin-right: 5px;
+    width: 16px; /* Standardize icon width */
+    text-align: center;
+}
+
+.top-bar-mobile .hamburger-menu i {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Header Desktop (Visible on Desktop, Hidden on Mobile) */
+.header-desktop {
+    display: none; /* Hidden by default for mobile */
+    justify-content: flex-end; /* Align to right */
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Subtle separator */
+    margin-bottom: 30px;
+}
+
+
+
+.top-icons {
+    display: flex;
+    align-items: center;
+}
+
+.top-icons i {
+    font-size: 1.3em;
+    margin-left: 20px;
+    color: #555;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 20px;
+    border: 2px solid #ea5091; /* Pink border for profile pic */
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Welcome Header */
+.main-content h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.main-content .feeling-question {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Mood Selection Buttons */
+.mood-selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.mood-button {
+    flex: 1; /* Distribute space equally */
+    min-width: 100px; /* Minimum width for buttons */
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1em;
+    color: #555;
+    transition: all 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.mood-button i {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+    color: #ea5091; /* Pink for icons */
+}
+
+.mood-button:hover,
+.mood-button.selected { /* Add a 'selected' class with JavaScript for active state */
+    border-color: #ea5091; /* Pink border on hover/selection */
+    /* background-color: #ffeef6;
+    color: #ea5091; */
+    transform: translateY(-5px);  /*Slight lift effect*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.lift{
+    border-color: #ea5091; /* Pink border on hover/selection */
+    background-color: #ffeef6;
+    color: #ea5091;
+    animation-name:lift ;
+    animation-fill-mode: forwards;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes lift{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-4px);
+    }
+}
+
+/* Submit Mood Button */
+.submit-mood {
+    width: 100%;
+    background-color: #ea5091;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 18px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: background-color 0.2s;
+}
+
+.submit-mood:hover {
+    background-color: #d13a7a;
+}
+
+/* Affirmation Box */
+.affirmation-box {
+    background-color: #fff;
+    border: 2px solid #ffeef6; /* Light pink border */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Action Buttons Grid */
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px; /* Space between cards */
+}
+
+.action-card {
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1em;
+    color: #555;
+    transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* More prominent shadow */
+}
+
+.action-card i {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #ea5091;
+}
+
+.action-card span {
+    font-weight: bold;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Desktop Styles (Min-width 768px) */
+@media (min-width: 768px) {
+    .sidebar {
+        display: flex; /* Show sidebar on desktop */
+    }
+
+    .top-bar-mobile {
+        display: none; /* Hide mobile top bar on desktop */
+    }
+
+    .header-desktop {
+        display: flex; /* Show desktop header */
+    }
+
+    .main-content {
+        padding: 40px; /* More padding on desktop */
+    }
+
+    .mood-selection {
+        justify-content: center; /* Center mood buttons on desktop */
+    }
+
+    .mood-button {
+        flex: unset; /* Remove flex grow */
+        width: 150px; /* Fixed width for mood buttons on desktop */
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr 1fr; /* Two columns */
+    }
+}
+
+/* Tablet Styles (Min-width 480px and Max-width 767px) - Optional adjustments */
+@media (min-width: 480px) and (max-width: 767px) {
+    .mood-selection {
+        justify-content: space-around;
+    }
+    .mood-button {
+        flex: 0 0 calc(50% - 15px); /* Two buttons per row */
+        max-width: calc(50% - 15px);
+    }
+    .action-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+}

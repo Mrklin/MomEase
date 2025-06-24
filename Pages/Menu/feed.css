@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-pink: #FF69B4; /* Deep Pink */
+    --light-pink: #FFC0CB; /* Light Pink */
+    --dark-gray: #333;
+    --medium-gray: #555;
+    --light-gray: #eee;
+    --white: #fff;
+    --border-color: #ddd;
+    --card-bg: #f9f9f9;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    position: relative; /* For positioning the fixed button */
+}
+
+/* Sidebar Styling - Reused from previous example, ensure consistency */
+.sidebar {
+    width: 250px;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.sidebar .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sidebar .logo span {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--dark-gray);
+}
+
+.sidebar .navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .navigation li {
+    margin-bottom: 15px;
+}
+
+.sidebar .navigation a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--medium-gray);
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .navigation a i {
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.sidebar .navigation a:hover,
+.sidebar .navigation li.active a {
+    background-color: var(--light-pink);
+    color: var(--primary-pink);
+}
+
+.sidebar .navigation li.active a {
+    font-weight: 600;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: var(--light-gray);
+}
+
+/* Header Styling - Reused from previous example, ensure consistency */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons i {
+    font-size: 1.5em;
+    color: var(--medium-gray);
+    margin-left: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.header-icons i:hover {
+    color: var(--dark-gray);
+}
+
+.header-icons .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+    object-fit: cover;
+    border: 2px solid var(--primary-pink);
+}
+
+/* Feeds Section Specific Styles */
+.feeds-section {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.feeds-section h2 {
+    font-size: 2em;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.feeds-section p {
+    font-size: 1.1em;
+    color: var(--medium-gray);
+    margin-bottom: 30px;
+}
+
+.emoji {
+    font-size: 1.2em;
+}
+
+.share-post-container {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.share-post-container textarea {
+    width: calc(100% - 40px); /* Account for padding */
+    min-height: 100px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: var(--dark-gray);
+    resize: vertical;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.share-post-container textarea::placeholder {
+    color: var(--medium-gray);
+}
+
+.share-post-container textarea:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.2);
+}
+
+.post-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 15px; /* Space between buttons */
+}
+
+.post-btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.post-btn i {
+    font-size: 0.9em; /* Adjust icon size */
+}
+
+.post-btn.outline {
+    background-color: var(--white);
+    color: var(--primary-pink);
+    border: 1px solid var(--primary-pink);
+}
+
+.post-btn.outline:hover {
+    background-color: var(--light-pink);
+}
+
+.post-btn.fill {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border: 1px solid var(--primary-pink); /* Keep border for consistency */
+}
+
+.post-btn.fill:hover {
+    background-color: #e05c9f; /* Slightly darker pink */
+}
+
+/* Feed Post Styling */
+.feed-post {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary-pink); /* Pink border on the left */
+}
+
+.feed-post .post-author {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--primary-pink);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.feed-post .post-content {
+    font-size: 1em;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.feed-post .post-date {
+    font-size: 0.85em;
+    color: var(--medium-gray);
+    margin-bottom: 15px;
+}
+
+.post-actions {
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.action-item {
+    display: flex;
+    align-items: center;
+    color: var(--medium-gray);
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.action-item:hover {
+    color: var(--primary-pink);
+}
+
+.action-item i {
+    margin-right: 5px;
+    font-size: 1.1em;
+}
+
+/* Talk to Someone Button */
+.talk-to-someone-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px; /* Pill shape */
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.talk-to-someone-btn:hover {
+    background-color: #e05c9f;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 80px;
+        padding: 15px 10px;
+    }
+    .sidebar .logo span {
+        display: none;
+    }
+    .sidebar .navigation a span {
+        display: none;
+    }
+    .sidebar .navigation a {
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .sidebar .navigation a i {
+        margin-right: 0;
+    }
+    .main-content {
+        padding: 20px;
+    }
+    .feeds-section {
+        padding: 0 10px;
+    }
+    .talk-to-someone-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 60px;
+        padding: 10px 5px;
+    }
+    .header {
+        justify-content: center;
+    }
+    .header-icons {
+        margin-right: 0;
+    }
+    .share-post-container,
+    .feed-post {
+        padding: 15px;
+    }
+    .post-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .post-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .talk-to-someone-btn {
+        bottom: 15px;
+        right: 15px;
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+}
