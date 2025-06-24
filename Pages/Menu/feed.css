@@ -104,6 +104,25 @@ body {
     padding-bottom: 20px;
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 30px;
+    flex-direction: column;
+}
+
+.ham_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.hamburger-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mob-nav{
+    display: none;
 }
 
 .header-icons {
@@ -123,13 +142,35 @@ body {
     color: var(--dark-gray);
 }
 
-.header-icons .profile-pic {
+.hamburger-menu i {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.top-icons {
+    display: flex;
+    align-items: center;
+}
+
+.top-icons i {
+    font-size: 1.3em;
+    margin-left: 20px;
+    color: #555;
+}
+
+.profile-pic {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    overflow: hidden;
     margin-left: 20px;
+    border: 2px solid #ea5091; /* Pink border for profile pic */
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border: 2px solid var(--primary-pink);
 }
 
 /* Feeds Section Specific Styles */
@@ -311,8 +352,7 @@ body {
 /* Responsive adjustments */
 @media (max-width: 900px) {
     .sidebar {
-        width: 80px;
-        padding: 15px 10px;
+        display: none;
     }
     .sidebar .logo span {
         display: none;
@@ -341,10 +381,51 @@ body {
     }
 }
 
-@media (max-width: 600px) {
-    .sidebar {
-        width: 60px;
-        padding: 10px 5px;
+@media (max-width: 900px) {
+    
+    .ham_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    }
+    #mob-nav {
+        display: flex; /* Hidden by default */
+        position: absolute;
+        top: 70px; /* Below the top bar */
+        left: 0px;
+        width: 20%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    #mob-nav ul{
+        list-style: none;
+        padding: 0;
+    }
+
+    #mob-nav li{
+        margin-bottom: 15px;
+    }
+
+    #mob-nav a {
+        text-decoration: none;
+        color: #555;
+        font-size: .8em;
+        display: flex;
+        align-items: center;
+        padding: 7px;
+        border-radius: 8px;
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+    #mob-nav a i {
+        margin-right: 5px;
+        width: 16px; /* Standardize icon width */
+        text-align: center;
     }
     .header {
         justify-content: center;

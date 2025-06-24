@@ -11,7 +11,7 @@
     <div class="container">
         <aside class="sidebar">
             <div class="logo">
-                <img src="https://i.imgur.com/your-momease-logo.png" alt="MomEase Logo"> <span>MomEase</span>
+                <img src="./media/Logo.svg" alt="MomEase Logo"> <span>MomEase</span>
             </div>
             <nav class="navigation">
                 <ul>
@@ -28,10 +28,28 @@
 
         <main class="main-content">
             <header class="header">
-                <div class="header-icons">
+                <div class="ham_container">
+                    <div class="hamburger-menu" id="hamburgerMenu"><i class="fas fa-bars"></i></div>
+                 <div class="top-icons">
                     <i class="fas fa-bell"></i>
                     <i class="fas fa-cog"></i>
-                    <img src="https://i.imgur.com/your-profile-pic.jpg" alt="Profile Picture" class="profile-pic"> </div>
+                    <div class="profile-pic">
+                        <img src="./media/profile.jpg" alt="Profile">
+                    </div>
+                </div>
+                </div>
+                
+                <nav class="navigation" id="mob-nav">
+                <ul>
+                    <li><a href="./das.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="./mood.html"><i class="fas fa-check-circle"></i> Mood Check-in</a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i> Affirmations</a></li>
+                    <li><a href="#"><i class="fas fa-microphone"></i> Voice Journals</a></li>
+                    <li><a href="#"><i class="fas fa-user-friends"></i> Partner Reminder</a></li>
+                    <li><a href="./feed.html"><i class="fas fa-book-open"></i> Feeds</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Insights</a></li>
+                </ul>
+                </nav>
             </header>
 
             <section class="feeds-section">
@@ -70,4 +88,5 @@
         <button class="talk-to-someone-btn">Talk to someone</button>
     </div>
 </body>
+<script src="./feed.js"></script>
 </html>
